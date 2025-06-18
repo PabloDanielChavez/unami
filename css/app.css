@@ -348,7 +348,7 @@ template {
 }
 .header__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
 .header__imgLogo {
@@ -416,7 +416,7 @@ template {
 }
 
 .bienvenida {
-  background-image: url(../img/slide1-bg.webp);
+  background-image: linear-gradient(rgba(10, 10, 36, 0.5), rgba(10, 10, 36, 0.5)), url(../img/back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 40rem;
@@ -426,24 +426,50 @@ template {
 .bienvenida__grid {
   margin-top: 10%;
   margin-bottom: 10%;
-  margin-left: 20%;
+  margin-left: 10%;
   margin-right: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
-@media (min-width: 1218px) {
-  .bienvenida__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 .bienvenida__box {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 0;
+}
+.bienvenida__parrafo {
+  color: white;
+}
+.bienvenida__h1Titulo {
+  color: #F5EBC8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.bienvenida__button {
+  margin-top: 2rem;
+  padding: 10% auto;
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  text-shadow: 2px 1px 4px #4a0b45;
+  transition: background 0.15s ease-in-out;
+  background-image: linear-gradient(rgba(10, 10, 36, 0.5), rgba(10, 10, 36, 0.5)), url(../img/colores.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0 0 20px 5px rgb(35, 5, 35);
+  border: 1px solid rgb(221, 212, 212);
+  border-radius: 8px;
+  transition: transform 0.1s ease-in-out;
+  width: 10rem;
+  text-transform: uppercase;
 }
 
 .sobrePlatos__grid {
