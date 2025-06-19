@@ -905,8 +905,15 @@ p {
   margin: 0 auto;
 }
 .footer__boxSec1 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1218px) {
+  .footer__boxSec1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .footer__h3 {
   color: #FF6400;
