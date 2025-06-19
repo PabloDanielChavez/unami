@@ -338,24 +338,108 @@ template {
 }
 
 /** Media Queries **/
+body {
+  position: relative;
+}
+
 .ventana {
   overflow: hidden;
   max-width: 100%;
 }
 
+h1 {
+  font-size: 2.9rem;
+}
+@media (min-width: 1218px) {
+  h1 {
+    font-size: 3.9rem;
+  }
+}
+@media (min-width: 1624px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+@media (min-width: 1827px) {
+  h1 {
+    font-size: 5.1rem;
+  }
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+@media (min-width: 1218px) {
+  h2 {
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 1624px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1827px) {
+  h2 {
+    font-size: 4.6rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+@media (min-width: 1218px) {
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1624px) {
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 1827px) {
+  h3 {
+    font-size: 2.6rem;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+}
+@media (min-width: 1218px) {
+  p {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1624px) {
+  p {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1827px) {
+  p {
+    font-size: 1.9rem;
+  }
+}
+
 .header {
-  padding: 1rem 2rem;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+  position: fixed;
 }
 .header__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 .header__imgLogo {
   width: 3rem;
 }
 .header__box {
-  margin: 0 auto;
   padding: 0.4rem;
 }
 .header__nav {
@@ -372,11 +456,6 @@ template {
 .header__span:hover {
   cursor: pointer;
   color: #FF6400;
-}
-.header__controlUsuario {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
 }
 .header__controlUsuario span {
   padding: 0.3rem;
@@ -484,10 +563,11 @@ template {
   margin-bottom: 4rem;
 }
 .sobrePlatos__h2Titulo {
-  font-size: 3.6rem;
+  font-family: "Roboto Mono", monospace;
   margin-bottom: 1rem;
 }
 .sobrePlatos__parrafo {
+  font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   color: #555;
 }
@@ -511,12 +591,15 @@ template {
 }
 .sobrePlatos__h3 {
   text-align: end;
-  color: #b20000;
+  color: #FF6400;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
   margin-bottom: 0.8rem;
   font-size: 1.7rem;
 }
 .sobrePlatos__parrafo {
   text-align: end;
+  font-family: "Roboto Mono", monospace;
   margin: 0;
   font-size: 1.5rem;
   color: #555;
@@ -581,9 +664,33 @@ template {
 .informacion__grid {
   width: 90%;
   margin: auto;
-  display: grid;
-  grid-template-columns: 2fr, 1fr;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1218px) {
+  .informacion__grid {
+    display: grid;
+    grid-template-columns: 2fr, 1fr;
+  }
+}
+.informacion__h2Titulo {
+  text-align: center;
+}
+@media (min-width: 1218px) {
+  .informacion__h2Titulo {
+    text-align: start;
+  }
+}
+.informacion__parrafo {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+@media (min-width: 1218px) {
+  .informacion__parrafo {
+    text-align: start;
+  }
 }
 
 .razon {
@@ -610,6 +717,30 @@ template {
     gap: 2rem;
   }
 }
+.razon__boxImg, .razon__img {
+  margin: 0 auto;
+  width: 10rem;
+}
+@media (min-width: 1218px) {
+  .razon__boxImg, .razon__img {
+    width: 15rem;
+  }
+}
+@media (min-width: 1624px) {
+  .razon__boxImg, .razon__img {
+    width: 20rem;
+  }
+}
+@media (min-width: 1827px) {
+  .razon__boxImg, .razon__img {
+    width: 25rem;
+  }
+}
+@media (min-width: 1827px) {
+  .razon__boxImg, .razon__img {
+    width: 30rem;
+  }
+}
 .razon__boxGrid {
   display: flex;
   flex-direction: column;
@@ -617,10 +748,16 @@ template {
   padding-left: 1rem;
 }
 .razon__h2Titulo {
-  text-align: end;
+  text-transform: uppercase;
   color: #555;
-  margin-bottom: 0.8rem;
+  text-align: center;
   font-size: 2rem;
+}
+@media (min-width: 974px) {
+  .razon__h2Titulo {
+    text-align: end;
+    margin-bottom: 0.8rem;
+  }
 }
 .razon__boxArticuloGrid {
   display: grid;
@@ -633,12 +770,14 @@ template {
   align-items: center;
 }
 .razon__h3Titulo {
+  font-family: "Roboto Mono", monospace;
   text-align: start;
-  color: #b20000;
+  color: #FF6400;
   margin-bottom: 0.8rem;
   font-size: 1.7rem;
 }
 .razon__parrafo {
+  font-family: "Open Sans", sans-serif;
   text-align: start;
   margin: 0;
   font-size: 1.5rem;
@@ -667,7 +806,8 @@ template {
   margin: 0;
 }
 .personalizar__h2Titulo {
-  color: #b20000;
+  color: #FF6400;
+  text-align: center;
   margin: 0;
   font-size: 3rem;
 }
@@ -678,7 +818,7 @@ template {
   font-size: 1.7rem;
 }
 .personalizar__button {
-  background-color: #b20000;
+  background-color: #FF6400;
   padding: 1rem 3rem;
   text-transform: uppercase;
   color: white;
@@ -704,15 +844,22 @@ template {
   align-items: center;
 }
 .catalogo__h2Titulo {
-  font-size: 2.6rem;
+  color: #FF6400;
 }
 .catalogo__parrafoBienvenida {
   font-size: 1.8rem;
 }
 .catalogo__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
+}
+@media (min-width: 1218px) {
+  .catalogo__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .catalogo__boxArticle {
   background-color: #f5f5f5;
@@ -736,12 +883,56 @@ template {
   flex-direction: column;
   align-items: center;
 }
-.catalogo .star {
-  color: yellow;
-}
 .catalogo__h3 {
+  font-family: "Roboto", sans-serif;
+  color: #323219;
   margin: 0;
+}
+.catalogo__precio {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  color: #FF6400;
   font-size: 2rem;
+}
+
+.footer {
+  background-color: #2A373D;
+  padding: 6rem 0;
+}
+.footer__grid {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+.footer__boxSec1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer__h3 {
+  color: #FF6400;
+  font-family: "Montserrat", sans-serif;
+}
+.footer__ul {
+  list-style: none;
+  padding-left: 14px;
+}
+.footer__li {
+  font-family: "Roboto", sans-serif;
+  color: #F5EBC8;
+  margin-bottom: 1rem;
+}
+.footer__redesBox {
+  margin-left: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__ventanaImg {
+  width: 2rem;
+}
+.footer__img {
+  width: 2rem;
 }
 
 /*# sourceMappingURL=app.css.map */
