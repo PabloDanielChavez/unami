@@ -367,6 +367,7 @@ h1 {
 }
 
 h2 {
+  font-family: "Roboto Mono", monospace;
   font-size: 2.6rem;
 }
 @media (min-width: 1218px) {
@@ -386,6 +387,7 @@ h2 {
 }
 
 h3 {
+  font-family: "Roboto Mono", monospace;
   font-size: 2rem;
 }
 @media (min-width: 1218px) {
@@ -405,6 +407,7 @@ h3 {
 }
 
 p {
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
 }
 @media (min-width: 1218px) {
@@ -598,7 +601,7 @@ p {
   font-size: 1.7rem;
 }
 .sobrePlatos__parrafo {
-  text-align: end;
+  text-align: center;
   font-family: "Roboto Mono", monospace;
   margin: 0;
   font-size: 1.5rem;
@@ -755,7 +758,6 @@ p {
 }
 @media (min-width: 974px) {
   .razon__h2Titulo {
-    text-align: end;
     margin-bottom: 0.8rem;
   }
 }
